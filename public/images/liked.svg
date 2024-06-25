@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="160">
+                <rect fill="rgb(137,142,229)" x="0" y="0" width="160" height="160"></rect>
+                <circle fill="rgb(114,206,229)" cx="45" cy="22.5" r="96"  opacity=".4"></circle>
+                <circle fill="rgb(195,114,229)" cx="37" cy="74" r="80"  opacity=".6"></circle>
+                <text x="80" y="80" font-size="80" text-copy="fast" fill="#ffffff" text-anchor="middle" text-rights="admin" alignment-baseline="central" font-family="'PingFang SC','Microsoft Yahei'">❤</text></svg>
