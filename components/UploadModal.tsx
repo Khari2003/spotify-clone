@@ -71,7 +71,7 @@ const UploadModal = () => {
 
             if(songError) {
                 setIsLoading(false)
-                console.log(songError)
+                console.log(456,songError)
                 return toast.error("Something went wrong")
             }
 

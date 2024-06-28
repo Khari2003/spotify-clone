@@ -28,6 +28,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
           disabled:cursor-not-allowed
           disabled:opacity-50
           focus:outline-none
+          text-white
         `,className)}
         disabled={disabled}
         ref={ref}
