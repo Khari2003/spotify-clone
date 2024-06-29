@@ -8,23 +8,28 @@ const getSongByTitle = async (title: string): Promise<Song[]> => {
         cookies: cookies
     })
 
-    if(!title) {
-        const allSongs = await getSongs()
-        return allSongs
-    }
-
-    const { data,error } = await supabase
-        .from("songs")
-        .select("*")
-        .ilike("title", `%${title}`)
-        .order("created_at",{ascending:false})
-
-    if(error){
-        console.log(error.message)
+    try {
+        if(!title) {
+            const allSongs = await getSongs()
+            return allSongs
+        }
+    
+        const { data,error } = await supabase
+            .from("songs")
+            .select("*")
+            .ilike("title", `%${title}%`)
+            .order("created_at",{ascending:false})
+    
+        if(error){
+            console.log(error.message)
+            return []
+        }
+    
+        return (data as any) || []
+    } catch (error) {
+        console.log(error)
         return []
     }
-
-    return (data as any) || []
 }
 
 export default getSongByTitle
